@@ -1,0 +1,9 @@
+cat /etc/issue # узнать версию Ubuntu
+useradd -m user1 # добавить нового пользователя
+cat /etc/passwd # просмотреть, что пользователь добавлен
+sudo passwd user1 # установить пароль для user1
+su user1 # сменить пользователя на user1
+exit # выйти из пользователя
+sudo usermod -aG adm user1 # добавить user1 в группу администратора, так он может просматривать файлы в /var/log
+ls -l /var/log # проверка прав в папке /var/log
+sudo userdel -r user1 # удалить пользователя
