@@ -1,7 +1,7 @@
-Part 1
+Part 1. Установка ОС
 cat /etc/issue # узнать версию Ubuntu
 
-Part 2
+Part 2. Создание пользователя
 useradd -m user1 # добавить нового пользователя
 cat /etc/passwd # просмотреть, что пользователь добавлен
 sudo passwd user1 # установить пароль для user1
@@ -15,7 +15,7 @@ sudo userdel -r user1 # удалить пользователя
 
 hostnamectl # посмотреть информацию о хосте, hostname - и есть машина или сервер
 
-Part 3
+Part 3. Настройка сети ОС
 Для изменения имени сервера нужно изменить его в 2х файлах:
 sudo nano /etc/hosts
 sudo nano /etc/hostname
@@ -61,9 +61,33 @@ iface enp0s3 inet static
     
 Далее сохранить эти настройки перезапустить sudo reboot now и проверить через ping yandex.com, есть ли подключение к сети
 
+Part 4. Обновление ОС
+sudo apt update # вычисляет, сколько пакетов может быть обновлено
+sudo apt full-upgrade # установка всех обновлений
+sudo do-release-upgrade # обновление системы до новой версии (если она есть)
 
+Part 5. Использование команды sudo
+sudo позволяет выполнять команды от имени root
+sudo su # зайти под root-ом, чтобы не нужно было в командах прописывать sudo, но тут все же напишу с ними
 
+Для изменения имени сервера, надо изменить это имя в 2х файлах:
+    /etc/hosts
+    /etc/hostname
 
+sudo usermod -aG adm user1 # добавляем user1 в группу adm
+
+ls -l /etc/hosts # проверить права в файле
+ls -l /etc/hostname # проверить права в файле
+
+sudo chmod g+w /etc/hosts # дать права на запись для группы adm
+sudo chmod g+w /etc/hostname # дать права на запись для группы adm
+
+sudo nano /etc/hosts # изменить имя сервера
+sudo nano /etc/hostname # изменить имя сервера
+
+sudo reboot now # перезагрузка, после этого имя сервера изменилось
+
+Part 6. Установка и настройка службы времени
 
 
 
