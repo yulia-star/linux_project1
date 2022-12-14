@@ -11,8 +11,6 @@ sudo usermod -aG adm user1 # добавить user1 в группу админи
 ls -l /var/log # проверка прав в папке /var/log
 sudo userdel -r user1 # удалить пользователя
 
-
-
 hostnamectl # посмотреть информацию о хосте, hostname - и есть машина или сервер
 
 Part 3. Настройка сети ОС
