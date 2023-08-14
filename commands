@@ -70,7 +70,9 @@ network:
        dhcp4: false
    version: 2
     
-Далее сохранить эти настройки перезапустить sudo reboot now и проверить через ping yandex.com, есть ли подключение к сети
+Далее сохранить эти настройки - либо sudo netplan apply,
+лобо перезапустить sudo reboot now
+и проверить через ping yandex.com, есть ли подключение к сети
 
 Part 4. Обновление ОС
 sudo apt update # вычисляет, сколько пакетов может быть обновлено
