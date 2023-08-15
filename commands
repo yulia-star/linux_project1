@@ -88,7 +88,7 @@ sudo su # зайти под root-ом, чтобы не нужно было в к
     /etc/hosts
     /etc/hostname
 
-sudo usermod -aG adm user1 # добавляем user1 в группу adm
+sudo usermod -aG adm,sudo user1 # добавляем user1 в группу adm и sudo
 
 ls -l /etc/hosts # проверить права в файле
 ls -l /etc/hostname # проверить права в файле
