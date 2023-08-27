@@ -268,6 +268,11 @@ tail /var/log/auth.log # выведет последние 10 строк
 tail -n 20 /var/log/auth.log # выведет последние 20 строк
 tail -f /var/log/auth.log # будет добавлять логи в режиме реального времени
 
+Логи хранятся:
+1. /var/log/dmesg
+2. /var/log/syslog
+3. /var/log/auth.log  
+
 Подсветка имени пользователя@сервера:
   в файле ~/.bashrc раскомментировать строку force_color_prompt=yes
   далее либо перезапустить
