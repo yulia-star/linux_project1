@@ -5,13 +5,21 @@ __cat /etc/issue__ # узнать версию Ubuntu
 
 ## Part 2. Создание пользователя
 __useradd -m user1__ # добавить нового пользователя;
+
 __cat /etc/passwd__ # просмотреть, что пользователь добавлен;
+
 __sudo passwd user1__ # установить пароль для user1;
+
 __su user1__ # сменить пользователя на user1;
+
 __exit__ # выйти из пользователя;
+
 __sudo usermod -aG adm user1__ # добавить user1 в группу администратора, так он может просматривать файлы в /var/log;
+
 __ls -l /var/log__ # проверка прав в папке /var/log;
+
 __sudo userdel -r user1__ # удалить пользователя;
+
 __hostnamectl__ # посмотреть информацию о хосте, hostname - и есть машина или сервер.
 
 ## Part 3. Настройка сети ОС
@@ -21,8 +29,11 @@ __hostnamectl__ # посмотреть информацию о хосте, hostn
 sudo nano /etc/hostname
 
 __sudo cp /etc/localtime /etc/localtime.bak__ # создать резервную копию текущего часового пояса
+
 __sudo ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime__ # меняет время в Linux на указанный пояс Europe/Moscow
+
 __ls usr/share/zoneinfo__ # посмотреть все часовые пояса
+
 __date__ # проверить свой часовой пояс
 
 внешний ip-адрес шлюза (ip) и внутренний IP-адрес шлюза, он же ip-адрес по умолчанию (gw - gateway - роутер).
