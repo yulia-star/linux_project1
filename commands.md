@@ -16,10 +16,12 @@ __cat /etc/issue__ # узнать версию Ubuntu
 
 ## Part 3. Настройка сети ОС
 Для изменения имени сервера нужно изменить его в 2х файлах:
-``
+
+```
 sudo nano /etc/hosts
 sudo nano /etc/hostname
-``
+```
+
 __sudo cp /etc/localtime /etc/localtime.bak__ # создать резервную копию текущего часового пояса
 
 __sudo ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime__ # меняет время в Linux на указанный пояс Europe/Moscow
